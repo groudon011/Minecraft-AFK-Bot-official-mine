@@ -2,39 +2,37 @@ const mineflayer = require('mineflayer')
 const express = require('express')
 
 const app = express()
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 10000
 
-app.get('/', (req,res) => {
-  res.send("Minecraft AFK Bot is running!")
+app.get('/', (req,res)=>{
+  res.send("AFK Bot Running")
 })
 
-app.listen(PORT, () => {
+app.listen(PORT, ()=>{
   console.log("Web server running on port " + PORT)
 })
 
+console.log("Starting Minecraft bot...")
+
 const bot = mineflayer.createBot({
-  host: 'BloxyTesoro.aternos.me',
+  host: "BloxyTesoro.aternos.me",
   port: 20588,
-  username: 'AFK_Bot'
+  username: "AFK_Bot",
+  version: false
 })
 
-bot.on('spawn', () => {
+bot.on("login", ()=>{
+  console.log("Bot logged in!")
+})
+
+bot.on("spawn", ()=>{
   console.log("Bot joined the server!")
-
-  setInterval(() => {
-    bot.setControlState('jump', true)
-
-    setTimeout(() => {
-      bot.setControlState('jump', false)
-    }, 500)
-
-  }, 30000)
 })
 
-bot.on('end', () => {
-  console.log("Bot disconnected, reconnecting...")
+bot.on("error", (err)=>{
+  console.log("Bot error:", err)
+})
 
-  setTimeout(() => {
-    startBot()
-  }, 5000)
+bot.on("end", ()=>{
+  console.log("Bot disconnected!")
 })
