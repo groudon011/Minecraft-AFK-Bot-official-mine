@@ -1,0 +1,75 @@
+{
+  "name": "AFK Bot",
+
+  "server": {
+    "ip": "BloxyTesoro.aternos.me",
+    "port": 20588,
+    "version": ""
+  },
+
+  "bot-account": {
+    "username": "AFK_Bot",
+    "password": "",
+    "type": "offline"
+  },
+
+  "utils": {
+    "auto-reconnect": true,
+    "auto-reconnect-delay": 3000,
+    "max-reconnect-delay": 30000,
+
+    "auto-auth": {
+      "enabled": false,
+      "password": "123456"
+    },
+
+    "anti-afk": {
+      "enabled": true,
+      "sneak": false
+    },
+
+    "chat-messages": {
+      "enabled": false,
+      "repeat": false,
+      "repeat-delay": 60,
+      "messages": ["Hello from bot"]
+    }
+  },
+
+  "movement": {
+    "enabled": true,
+
+    "circle-walk": {
+      "enabled": false,
+      "radius": 3,
+      "speed": 3000
+    },
+
+    "random-jump": {
+      "enabled": true,
+      "interval": 30000
+    },
+
+    "look-around": {
+      "enabled": true,
+      "interval": 20000
+    }
+  },
+
+  "modules": {
+    "avoidMobs": false,
+    "combat": false,
+    "beds": false,
+    "chat": false
+  },
+
+  "discord": {
+    "enabled": false,
+    "webhookUrl": "",
+    "events": {
+      "connect": false,
+      "disconnect": false,
+      "chat": false
+    }
+  }
+}
