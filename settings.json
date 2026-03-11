@@ -2,8 +2,8 @@
   "name": "AFK Bot",
 
   "server": {
-    "ip": "BloxyTesoro.aternos.me",
-    "port": 20588,
+    "ip": "akaag97_01.aternos.me",
+    "port": 27042,
     "version": ""
   },
 
@@ -72,4 +72,5 @@
       "chat": false
     }
   }
+
 }
