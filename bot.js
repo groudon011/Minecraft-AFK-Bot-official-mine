@@ -15,8 +15,8 @@ app.listen(PORT, ()=>{
 console.log("Starting Minecraft bot...")
 
 const bot = mineflayer.createBot({
-  host: "BloxyTesoro.aternos.me",
-  port: 20588,
+  host: "akaag97_01.aternos.me",
+  port: 27042,
   username: "AFK_Bot",
   version: false
 })
@@ -36,3 +36,4 @@ bot.on("error", (err)=>{
 bot.on("end", ()=>{
   console.log("Bot disconnected!")
 })
+
