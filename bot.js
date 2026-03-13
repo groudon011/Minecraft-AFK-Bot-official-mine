@@ -20,7 +20,7 @@ function startBot(){
     host: "akaag97_01.aternos.me",
     port: 27042,
     username: "Botu_001",
-    version: false
+    version: "1.21.11"
   })
 
   bot.on('login', () => {
@@ -55,5 +55,6 @@ function startBot(){
   })
 
 }
+
 
 startBot()
